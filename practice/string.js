@@ -1,3 +1,11 @@
-let a = "my name is Shubham";
+let a = "   my name is Shubham    ";
+let b = " what'up";
 a.toUpperCase();
-console.log(a);
+console.log(a.toUpperCase());
+console.log(a.toLowerCase());
+console.log(a.trim());
+console.log(a.slice(14,21));
+console.log(a.concat(b));
+console.log(a.trim().concat(b));
+console.log(a.replace("my","I"));
+console.log(a.charAt(3));
