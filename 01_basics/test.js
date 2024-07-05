@@ -13,7 +13,7 @@ function equal(str1,str2){
 let a = 5;
 let b = 5; 
 
-let c = (a);
+let c = BigInt(a);
 console.log(c);
 
 console.log(typeof c);
