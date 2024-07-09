@@ -17,7 +17,24 @@ const JsUser = {
     lastLoggedIn: ["Monday", "Saturday"]
 }
 
-console.log(JsUser.email);
-console.log(JsUser['email']);
-console.log(JsUser['full name']);
-console.log(typeof JsUser[mysym]);
+// console.log(JsUser.email);
+// console.log(JsUser['email']);
+// console.log(JsUser['full name']);
+// console.log(JsUser[mysym]); // to excess any symbol 
+
+JsUser.email = "shubham.@chatgpt.com";
+// Object.freeze(JsUser);
+JsUser.email = "situ@google.com";
+// console.log(JsUser);
+
+JsUser.greeting = function () {
+    console.log("Hello");
+}
+
+JsUser.greetingTwo = function () {
+    console.log(`hello, ${this.name}`);
+}
+
+console.log(JsUser.greeting());
+// console.log(JsUser);
+console.log(JsUser.greetingTwo());
