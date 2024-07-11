@@ -64,8 +64,39 @@ const users = [
 // users[1].email = 'Situ@gmail.com'
 // console.log(users[1].email);
 
-console.log(tinderUser);
+// console.log(tinderUser);
 
-console.log(Object.keys(tinderUser));
-console.log(Object.values(tinderUser));
-console.log(Object.entries(tinderUser));
+// console.log(Object.keys(tinderUser)); // check the keys .
+// console.log(Object.values(tinderUser)); // check the values of the key.
+// console.log(Object.entries(tinderUser)); // displays the key and the value of the object and separate them one by one.
+
+// console.log(tinderUser.hasOwnProperty('name')); check the keys
+
+const course = {
+    courseName: "JS in hindi",
+    price: 999,
+    courseInstructor: "hitesh"
+}
+
+const {courseInstructor : instructor} = course; //  This is how we can de-structure an object and now we can use this value anywhere i want to use and also i change the name of my course key from cousreInstructor to instructor.
+
+console.log(instructor);
+
+{
+    "hi": {
+    "name": "hitesh",
+    "coursename": "Js in hindi",
+    "price": "free"
+    },
+    "hello": {
+        "name": "hitesh",
+        "coursename": "Js in hindi",
+        "price": "free"
+        }
+}
+
+[
+    {},
+    {},
+    {}
+]
