@@ -14,8 +14,8 @@ let valueInNumber = Number(score);
 
 let isLoggedIn = 1;
 
-// let booleanIsLoggedIn = Boolean(isLoggedIn);
-// console.log( booleanIsLoggedIn);
+let booleanIsLoggedIn = Boolean(isLoggedIn);
+// console.log(typeof booleanIsLoggedIn);
 
 // ******************** Operations ************************
 
@@ -37,5 +37,9 @@ str2 = str2.toUpperCase();
 
 let str3 = str1 + str2 ;
 
-console.log(str3);
+// console.log(str3);
  
+let num = 857458569855574587n;
+
+console.log(typeof num);
+
