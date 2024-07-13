@@ -1,4 +1,4 @@
-// // Variables Declaration
+ Variables Declaration
 
 // var number = 123;
 // console.log(number);
@@ -50,27 +50,27 @@
 // reassign = 2;
 // console.log(reassign);
 
-let change = 12;
-console.log(change);
-console.log(typeof change);
+// let change = 12;
+// console.log(change);
+// console.log(typeof change);
 
-change = "hello";
-console.log(change);
-console.log(typeof change);
+// change = "hello";
+// console.log(change);
+// console.log(typeof change);
 
-change = true;
-console.log(change);
-console.log(typeof change);
+// change = true;
+// console.log(change);
+// console.log(typeof change);
 
-change = {
-    name: "sam",
-    roll: 12
-};
-console.log(change);
-console.log(typeof change);
+// change = {
+//     name: "sam",
+//     roll: 12
+// };
+// console.log(change);
+// console.log(typeof change);
 
-change = [1, 2, 3, 4];
-console.log(change);
-console.log(typeof change);
+// change = [1, 2, 3, 4];
+// console.log(change);
+// console.log(typeof change);
 
 
