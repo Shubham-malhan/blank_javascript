@@ -23,7 +23,22 @@ for (let index = 0; index < myArray.length; index++) {
 
 // break and continue
 
-for (let index = 0; index < ; index++) {
-    const element = array[index];
-    
+// for (let index = 1; index <= 20; index++) {
+//     // const element = array[index];
+//     if (index == 5) {
+//         console.log("detected 5");
+//         break;
+//     }
+//     console.log(index);
+
+// }
+
+for (let index = 1; index <= 20; index++) {
+    // const element = array[index];
+    if (index == 5) {
+        console.log("detected 5");
+        continue; // give one change and excute the statement from the next index;
+    }
+    console.log(index);
+
 }
