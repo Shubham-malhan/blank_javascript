@@ -57,6 +57,21 @@ let specific = (str, value) => {
 
 // console.log(specific(""));
 
+// Write a function that take two parameters and returns their product. Provide a default value for the second parameter.
+
+function product(num1 , num2 = 4) {
+    return num1 * num2
+}
+// console.log(product(10));
+
+// Write a function that takes a person's name and age and return a greeting message. Provide a default value for the age.
+
+let greeting = (name, age = 20) => (`hello ${name} thanks for coming at the age of ${age}`);
+
+console.log(greeting("shubham"));
+
+
+
 
 
 
