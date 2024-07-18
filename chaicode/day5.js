@@ -70,9 +70,3 @@ let greeting = (name, age = 20) => (`hello ${name} thanks for coming at the age 
 
 console.log(greeting("shubham"));
 
-
-
-
-
-
-
