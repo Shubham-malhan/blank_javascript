@@ -21,8 +21,33 @@ books.updateYear = (year) => {
     // console.log(this);
 }
 
-console.log(books);
-books.updateYear(2002);
-console.log(books);
+// console.log(books);
+// books.updateYear(2002);
+// console.log(books);
+
+
+
+
+
+
+
+
+
+
+
+books.call = function (){
+    return this.tittle + " " + this.author;
+}
+
+// console.log(books.call());
+
+
+for (const key in books) {
+    // console.log(books[key]
+    // );
+}
+
+console.log(Object.keys(books));
+console.log(Object.values(books));
 
 
