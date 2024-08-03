@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body style="background-color: black; color: white">
+    <ul class="language">
+      <li>Javascript</li>
+    </ul>
+  </body>
+  <script>
+    function addLanguage(langName) {
+      const li = document.createElement("li");
+      li.appendChild(document.createTextNode(langName));
+    document.querySelector(".language").appendChild(li);
+    }
+
+    addLanguage('java');
+    addLanguage('python');
+
+    //edit 
+
+    const secondLang = document.querySelector('li:nth-child(2)');
+    // secondLang.innerHTML = 'hello';
+    const newli = document.createElement('li');
+    newli.appendChild(document.createTextNode('ruby'));
+    secondLang.replaceWith(newli);
+
+    //edit
+
+    const firstLang = document.querySelector('li:first-child');
+    // const li = document.createElement('li');
+    // li.appendChild(document.createTextNode('java'));
+    // firstLang.replaceWith(li);
+    firstLang.innerHTML = 'java';
+
+    const lastLang = document.querySelector('li:last-child');
+    lastLang.remove();
+
+  </script>
+</html>
