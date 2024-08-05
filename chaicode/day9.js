@@ -13,3 +13,8 @@ function CreateLi() {
     li.appendChild(document.createTextNode('li'));
 
 }
+
+function change(message) {
+    const element = document.querySelector('');
+    element.innerHTML = `message`;
+}
