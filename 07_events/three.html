@@ -18,7 +18,10 @@
         let set;
 
         document.getElementById('start').addEventListener('click', () => {
-            set = setInterval(sayDate, 1000, 'hitesh');
+            if(!set){
+                set = setInterval(sayDate, 1000, 'hitesh');
+            }
+           
         })
 
         document.getElementById('stop').addEventListener('click', () => {
