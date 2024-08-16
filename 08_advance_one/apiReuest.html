@@ -1,31 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body style="background-color: #212121;">
-    
-</body>
-<script>
-    const requestUrl = 'https://api.github.com/users/Shubham-malhan';
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+      }
+
+      #card-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin-top: 20px;
+      }
+
+      .card {
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        width: 300px;
+        text-align: center;
+      }
+
+      .card img {
+        width: 100%;
+        height: auto;
+      }
+
+      .card h2 {
+        margin: 16px 0;
+      }
+
+      .card p {
+        color: #666;
+        padding: 0 16px;
+      }
+
+      .card button {
+        background-color: #007bff;
+        border: none;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+        margin: 16px;
+      }
+
+      .card button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body style="background-color: #212121">
+    <button id="create-card-button">Create Card</button>
+    <div id="card-container"></div>
+  </body>
+  <script>
+    const requestUrl = 'https://api.github.com/users/hiteshchoudhary';
     const xhr = new XMLHttpRequest();
     // console.log(xhr.readyState);
     xhr.onreadystatechange = function(){
         // console.log(xhr.readyState);
         if (xhr.readyState === 4) {
-            const data = this.responseText;
-            // console.log(data);
-            
+            const data = JSON.parse(this.responseText);
+            console.log(data);
+            console.log(typeof data);
+            console.log(data.followers);
+            const cardContainer = document.querySelector('#card-container');
+            document.querySelector('#create-card-button').addEventListener('click', function(e) {
+                e.preventDefault();
+
+                const card = document.createElement('div');
+                card.id = 'card';
+                card.className = 'card';
+
+
+                card.innerHTML = ` <img src="${data.avatar_url
+}" alt="Card Image">
+            <h2>Followers ${data.followers}</h2>
+            `;
+
+            cardContainer.appendChild(card);
+            })
+
+
         }else {
             // console.log(xhr.responseText);
         }
 
-        
+
     }
     // console.log(xhr.readyState);
     xhr.open('get', requestUrl);
-    xhr.send(); 
-</script>
+    xhr.send();
+  </script>
 </html>
