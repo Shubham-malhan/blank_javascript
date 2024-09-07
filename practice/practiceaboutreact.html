@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body bgcolor="black">
+    <div style="height: 100vh; display: flex;  flex-direction: column;
+     justify-content: center; align-items: center; color: #fff">
+      <h1>Chai aur react</h1>
+        <div id="counter">
+      <!-- <h3 >Counter Value : 15</h3> -->
+    </div>
+
+      <button id="add">Add value</button><br />
+      <button id="remove" style="margin-top: 0.7rem">remove value</button>
+    </div>
+
+    <script>
+        let counter = 15;
+        counterValue();
+        document.querySelector('#add').addEventListener('click', ()=> {
+           counter++; 
+           counterValue();
+           console.log(counter);
+        })
+        document.getElementById('remove').addEventListener('click', ()=>{
+            counter--;
+           counterValue();
+           console.log(counter);
+
+        })
+
+        function counterValue() {
+            let newvalue = document.getElementById('counter');
+            newvalue.innerHTML = `<h3 >Counter Value : ${counter}</h3>`
+        }
+    </script>
+  </body>
+</html>
